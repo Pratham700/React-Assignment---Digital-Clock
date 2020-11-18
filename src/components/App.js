@@ -42,7 +42,7 @@ class App extends Component {
 
         const twelveHourSys = hours>12 ? hours-12 : hours ;
 
-        const hourString = this.padNumberToString(twelveHourSys) ;
+        const hourString = "" + twelveHourSys ;
         const minuteString = this.padNumberToString(minutes) ;
         const secondsString = this.padNumberToString(seconds) ;
 
@@ -50,7 +50,7 @@ class App extends Component {
         return timeDisplay ;
     }
     padNumberToString (num){
-            return `${num > 10 ?"0":""}${num}` ;
+            return `${num < 10 ?"0":""}${num}` ;
     };
 }
 
